@@ -18,8 +18,8 @@ import Component2 from './Components/Component2'
 export default class homepage extends Component {
   render() {
     return (
-      <View>
-        <Component2 />
+      <View >
+        <Component1 />
       </View>
     );
   }
@@ -27,21 +27,8 @@ export default class homepage extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+
+  }
 });
 
 AppRegistry.registerComponent('homepage', () => homepage);

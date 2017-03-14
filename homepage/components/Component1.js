@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { AppRegistry, Text, View, StyleSheet, TouchableOpacity,
+          TouchableHighlight, MapView
 
         } from 'react-native'
 
@@ -7,7 +8,7 @@ export default class Component1 extends Component {
     constructor(props){
       super(props)
       this.state = {
-        name: 'Alexa',
+        name: 'Alex',
         showName: true,
         message: this.props.message
       }
@@ -31,22 +32,21 @@ export default class Component1 extends Component {
               <Text style={ styles.myPadding }>{name}</Text>
           </View>
           <View style={styles.container}>
-              <TouchableOpacity
-                  onPress={this.onPress}
-                  style={ styles.v1}
-                  activeOpacity={0.1}
-              >
+              <TouchableOpacity style={ styles.v1} activeOpacity={0.1}>
                   <View >
-                    <Text>View1</Text>
+                    <Text>Active Opacity</Text>
                   </View>
               </TouchableOpacity>
-              <View style={ styles.v2}>
-                  <Text>View2</Text>
-              </View>
-              <View style={ styles.v3}>
-                  <Text>View3</Text>
-              </View>
+              <TouchableHighlight onPress={this.onPress} style={ styles.v2}>
+                  <View>
+                      <Text>Touchable Highlight</Text>
+                  </View>
+              </TouchableHighlight>
           </View>
+          <MapView
+              style={{ height: 200}}
+              showUserLocation={true}
+          />
       </View>
     )
   }
@@ -54,15 +54,17 @@ export default class Component1 extends Component {
 
   const styles = StyleSheet.create({
     myPadding: {
-      padding: 20
+      padding: 20,
+      textAlign: 'center',
+      marginTop: 15
     },
     myColor: {
       backgroundColor: 'lightblue'
     },
     container: {
       flexDirection: 'row',
-      height: 100
-    },
+      height: 100,
+        },
     v1: {
       flex:1,
       backgroundColor: 'orange',
