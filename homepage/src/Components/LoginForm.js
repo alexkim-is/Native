@@ -29,7 +29,7 @@ export default class LoginForm extends Component {
           style={styles.input}
           ref={(input) => this.passwordInput = input}
         />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={(event) => console.log("here")}>
         <Text style={styles.text}>Login</Text>
       </TouchableOpacity>
     </View>
