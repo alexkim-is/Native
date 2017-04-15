@@ -81,6 +81,3 @@ export default class Component1 extends Component {
       padding: 10
     }
   })
-
-
-AppRegistry.registerComponent('Component1', ()=> Component1)

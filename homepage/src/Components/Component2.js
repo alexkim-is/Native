@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import { AppRegistry, View, Text, TextInput } from 'react-native';
+import { AppRegistry, View, Text, TextInput,
+          Keyboard
+
+ } from 'react-native';
 
 
-export default class Component3 extends Component {
+export default class Component2 extends Component {
   constructor() {
     super();
     this.state = {
@@ -22,9 +25,8 @@ export default class Component3 extends Component {
        <TextInput
           {...this.props}
           maxLength={40}
-
           style={{ padding: 30,
-             borderBottomColor: 'red',
+             color: 'red',
             }}
           placeholder='enter text'
           onChangeText={(value)=> this.onChangeText(value)}
@@ -37,4 +39,4 @@ export default class Component3 extends Component {
 }
 
 
-AppRegistry.registerComponent('Component3', ()=> Component3)
+AppRegistry.registerComponent('Component2', ()=> Component2)

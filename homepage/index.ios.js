@@ -1,34 +1,30 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry, ScrollView, Text, StyleSheet} from 'react-native';
 
-import Component1 from './Components/Component1'
-import Component2 from './Components/Component2'
+import Component1 from './src/Components/Component1'
+import Component2 from './src/Components/Component2'
+import Login1 from './src/Components/Login1'
+import ListNames from './src/Components/ListNames'
 
-export default class homepage extends Component {
+class homepage extends Component {
   render() {
     return (
-      <View >
-        <Component1 />
-      </View>
-    );
+      <ScrollView>
+          <ListNames />
+          <Login1 />
+      </ScrollView>
+    )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-
+  texts: {
+    color: 'red',
+    fontSize: 25
   }
-});
+})
+
+
 
 AppRegistry.registerComponent('homepage', () => homepage);
